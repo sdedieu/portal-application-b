@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
-import { PortalShellModule } from 'portal-shell';
+import { PortalShellModule } from 'the-one-portal-shell';
 
 import { AppComponent } from './app.component';
 import { routes } from './routes';
