@@ -19,14 +19,14 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   template: `
     <section>
      <form [formGroup]="filters" class="filter-area">
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Characters</mat-label>
         <select matNativeControl formControlName='selectedCharacter'>
           <option *ngFor="let character of characters$ | async" [ngValue]="character"
           >{{character.name}}</option>
         </select>
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Movies</mat-label>
         <select matNativeControl formControlName='selectedMovie'>
           <option *ngFor="let movie of movies$ | async" [ngValue]="movie">{{movie.name}}</option>
@@ -65,7 +65,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class QuotesSearchComponent implements OnInit {
-  
+
   private _lotrMovieService = inject(LotrMovieService);
   private _lotrCharacterService = inject(LotrCharacterService);
 
@@ -73,11 +73,11 @@ export class QuotesSearchComponent implements OnInit {
     selectedCharacter: new FormControl<Character | null>(null),
     selectedMovie: new FormControl<Movie | null>(null)
   })
-  
+
   characters$: Observable<Characters> = EMPTY;
   movies$: Observable<Movies> = EMPTY;
   quotes$: Observable<Quotes> = EMPTY;
-  
+
   ngOnInit(): void {
     this.characters$ = this._lotrCharacterService.getAllWithQuotes();
     this.movies$ = this._lotrMovieService.getAll();
