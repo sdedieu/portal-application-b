@@ -1,14 +1,10 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-
-import { PortalShellModule } from 'the-one-portal-shell';
 
 import { AppComponent } from './app.component';
 import { routes } from './routes';
-import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -17,8 +13,7 @@ import { environment } from 'src/environments/environment';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
-    PortalShellModule.forRoot(environment)
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

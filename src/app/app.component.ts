@@ -2,11 +2,7 @@ import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-  <lib-the-one-portal-shell>
-    <router-outlet></router-outlet>
-  </lib-the-one-portal-shell>
-  `,
+  template: `<router-outlet></router-outlet>`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
