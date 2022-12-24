@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
 import { LotrQuoteService } from './lotr-quote.service';
 import { Character, Characters } from '../interfaces/character';
 import { Quote } from '../interfaces/quote';
-import { LocalStorageService } from './local-storage.service';
+import { LocalStorageService } from 'the-one-portal-shell';
 
 @Injectable({
   providedIn: 'root'

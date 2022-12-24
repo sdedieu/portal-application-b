@@ -3,7 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { Observable, tap, map, shareReplay, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Movies } from '../interfaces/movie';
-import { LocalStorageService } from './local-storage.service';
+import { LocalStorageService } from 'the-one-portal-shell';
 import { LotrQuoteService } from './lotr-quote.service';
 
 @Injectable({

@@ -6,7 +6,7 @@ import { Observable, tap, shareReplay } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Quotes } from '../interfaces/quote';
-import { LocalStorageService } from './local-storage.service';
+import { LocalStorageService } from 'the-one-portal-shell';
 
 @Injectable({
   providedIn: 'root'
